@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>robot305_control</name>
+  <version>1.0.0</version>
+  <description>The robot305_control package</description>
+
+  <maintainer email="pc@humarobotics.com">Philippe Capdepuy</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://wiki.ros.org/robot305_control</url>
+
+  <author email="pc@humarobotics.com">Philippe Capdepuy</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>robot305_description_imu</run_depend>
+<!--  <run_depend>gazebo_ros</run_depend> -->
+
+
+</package>

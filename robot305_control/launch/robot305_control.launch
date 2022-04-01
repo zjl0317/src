@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <rosparam file="$(find robot305_control)/config/robot305_control.yaml" command="load"/>
+
+
+  <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/robot305" args=" head_pan_position_controller head_tilt_position_controller  l_sho_pitch_position_controller
+    l_sho_roll_position_controller l_el_position_controller
+    r_sho_pitch_position_controller r_sho_roll_position_controller
+    r_el_position_controller l_hip_pitch_position_controller
+    l_hip_roll_position_controller l_hip_yaw_position_controller
+    l_knee_position_controller l_ank_pitch_position_controller
+    l_ank_roll_position_controller r_hip_pitch_position_controller
+    r_hip_roll_position_controller r_hip_yaw_position_controller
+    r_knee_position_controller r_ank_pitch_position_controller
+    r_ank_roll_position_controller waist_position_controller
+    joint_state_controller"/>
+    
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/robot305/joint_states" />
+  </node>
+
+</launch>

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<launch>
+
+   <param name="robot_description" textfile="$(find robot305_description_imu)/urdf/robot305_gazebo_inertia.urdf" />  
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <arg name="paused" value="true"/>
+    
+  </include>
+  
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find robot305_description_imu)/urdf/robot305_gazebo_inertia1.urdf -urdf -model robot305 -z 0.3642" />
+
+
+  <include file="$(find robot305_control)/launch/robot305_control.launch"/>
+
+  <node name="robot305_walker" pkg="robot305_gazebo" type="walker.py" />
+
+
+
+
+
+
+</launch>

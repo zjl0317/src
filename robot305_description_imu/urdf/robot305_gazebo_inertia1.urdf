@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot305_description_imu">
+  <link name="world">
+  </link>
+
+  <joint name="world_fixed" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 1.5708"/>
+    <parent link="world"/>
+    <child link="BODY"/>
+  </joint>
+  <link
+    name="BODY">
+    <inertial>
+      <origin
+        xyz="-0.0089014 8.8594E-06 0.046409"
+        rpy="0 0 0" />
+      <mass
+        value="0.68737" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/BODY.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/BODY.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="HEAD_PAN">
+    <inertial>
+      <origin
+        xyz="0.00203856931487195 3.20934481125238E-15 0.00805568439980883"
+        rpy="0 0 0" />
+      <mass
+        value="0.00884401300499875" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/HEAD_PAN.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/HEAD_PAN.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_pan"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1088"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="HEAD_PAN" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="HEAD_TILT">
+    <inertial>
+      <origin
+        xyz="0.000744248588642908 0.000567055400995601 0.0165302540119616"
+        rpy="0 0 0" />
+      <mass
+        value="0.0589790620071985" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/HEAD_TILT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/HEAD_TILT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_tilt"
+    type="revolute">
+    <origin
+      xyz="0.008 0 0.0256"
+      rpy="0 0 0" />
+    <parent
+      link="HEAD_PAN" />
+    <child
+      link="HEAD_TILT" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="Intel_D435i">
+    <inertial>
+      <origin
+        xyz="5.86984459334042E-05 2.77438074049177E-05 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.29999985584757" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/Intel_D435i.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/Intel_D435i.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="d435i"
+    type="fixed">
+    <origin
+      xyz="0.001 0.0008 0.0547"
+      rpy="0 0 0" />
+    <parent
+      link="HEAD_TILT" />
+    <child
+      link="Intel_D435i" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L_SHO_PITCH">
+    <inertial>
+      <origin
+        xyz="-0.000105678428481914 0.0103311284711402 0.000104281763278563"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170198320073435" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_SHO_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_SHO_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_sho_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0.09514 0.093"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="L_SHO_PITCH" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_SHO_ROLL">
+    <inertial>
+      <origin
+        xyz="0.000660305859717175 0.0273638889981238 -3.32496535014604E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0571649744384682" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_SHO_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_SHO_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_sho_roll"
+    type="revolute">
+    <origin
+      xyz="0 0.026 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_SHO_PITCH" />
+    <child
+      link="L_SHO_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_EL">
+    <inertial>
+      <origin
+        xyz="2.24244067219088E-05 0.022414568729119 0.00164214618288078"
+        rpy="0 0 0" />
+      <mass
+        value="0.0564633803591698" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_EL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_EL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_el"
+    type="revolute">
+    <origin
+      xyz="6E-05 0.099 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_SHO_ROLL" />
+    <child
+      link="L_EL" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_SHO_PITCH">
+    <inertial>
+      <origin
+        xyz="-0.000104621547146841 -0.0103311265166709 0.000104270870135023"
+        rpy="0 0 0" />
+      <mass
+        value="0.0170198425040673" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_SHO_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_SHO_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_sho_pitch"
+    type="revolute">
+    <origin
+      xyz="0 -0.09514 0.093"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="R_SHO_PITCH" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_SHO_ROLL">
+    <inertial>
+      <origin
+        xyz="0.000660305859719581 -0.0273638889976491 1.1047673555642E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0571649744384682" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_SHO_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_SHO_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_sho_roll"
+    type="revolute">
+    <origin
+      xyz="0 -0.026 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_SHO_PITCH" />
+    <child
+      link="R_SHO_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_EL">
+    <inertial>
+      <origin
+        xyz="-2.24240727187515E-05 -0.0224145687294529 0.00164214618288087"
+        rpy="0 0 0" />
+      <mass
+        value="0.0564633803591696" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_EL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_EL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_el"
+    type="revolute">
+    <origin
+      xyz="6E-05 -0.099 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_SHO_ROLL" />
+    <child
+      link="R_EL" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="WAIST">
+    <inertial>
+      <origin
+        xyz="-0.023228 -1.6764E-07 -0.032821"
+        rpy="0 0 0" />
+      <mass
+        value="0.25814" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/WAIST.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/WAIST.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist"
+    type="revolute">
+    <origin
+      xyz="0.01 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="WAIST" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_HIP_YAW">
+    <inertial>
+      <origin
+        xyz="0.0020262 -6.8547E-13 -0.0089335"
+        rpy="0 0 0" />
+      <mass
+        value="0.022437" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_YAW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_YAW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.01 0.041 -0.0537"
+      rpy="0 0 0" />
+    <parent
+      link="WAIST" />
+    <child
+      link="L_HIP_YAW" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_HIP_ROLL">
+    <inertial>
+      <origin
+        xyz="-0.022368 -4.6127E-05 -0.014708"
+        rpy="0 0 0" />
+      <mass
+        value="0.15426" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0345"
+      rpy="0 0 0" />
+    <parent
+      link="L_HIP_YAW" />
+    <child
+      link="L_HIP_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_HIP_PITCH">
+    <inertial>
+      <origin
+        xyz="-3.436E-06 -0.00020124 -0.09746"
+        rpy="0 0 0" />
+      <mass
+        value="0.085906" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_HIP_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0.01704" />
+    <parent
+      link="L_HIP_ROLL" />
+    <child
+      link="L_HIP_PITCH" />
+    <axis
+      xyz="0.017039 0.99985 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_KNEE">
+    <inertial>
+      <origin
+        xyz="0.0021571 -0.0004 -0.057639"
+        rpy="0 0 0" />
+      <mass
+        value="0.03206" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_KNEE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_KNEE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_knee"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12"
+      rpy="0 0 -0.01704" />
+    <parent
+      link="L_HIP_PITCH" />
+    <child
+      link="L_KNEE" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_ANK_PITCH">
+    <inertial>
+      <origin
+        xyz="-0.022368 -0.00025407 0.014708"
+        rpy="0 0 0" />
+      <mass
+        value="0.15426" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_ANK_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_ANK_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ank_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12"
+      rpy="0 0 0" />
+    <parent
+      link="L_KNEE" />
+    <child
+      link="L_ANK_PITCH" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="L_ANK_ROLL">
+    <inertial>
+      <origin
+        xyz="0.00024893 0.004754 -0.030898"
+        rpy="0 0 0" />
+      <mass
+        value="0.018474" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_ANK_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/L_ANK_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ank_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="L_ANK_PITCH" />
+    <child
+      link="L_ANK_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_HIP_YAW">
+    <inertial>
+      <origin
+        xyz="0.0020262 -6.8548E-13 -0.0089335"
+        rpy="0 0 0" />
+      <mass
+        value="0.022437" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_YAW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_YAW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.01 -0.041 -0.0537"
+      rpy="0 0 0" />
+    <parent
+      link="WAIST" />
+    <child
+      link="R_HIP_YAW" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_HIP_ROLL">
+    <inertial>
+      <origin
+        xyz="-0.022368 4.6168E-05 -0.014708"
+        rpy="0 0 0" />
+      <mass
+        value="0.15426" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9098 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0345"
+      rpy="0 0 0" />
+    <parent
+      link="R_HIP_YAW" />
+    <child
+      link="R_HIP_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_HIP_PITCH">
+    <inertial>
+      <origin
+        xyz="-3.4229E-06 0.00020124 -0.09746"
+        rpy="0 0 0" />
+      <mass
+        value="0.085906" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_HIP_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -0.01704" />
+    <parent
+      link="R_HIP_ROLL" />
+    <child
+      link="R_HIP_PITCH" />
+    <axis
+      xyz="-0.017039 0.99985 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_KNEE">
+    <inertial>
+      <origin
+        xyz="0.0021571 0.0004 -0.057639"
+        rpy="0 0 0" />
+      <mass
+        value="0.03206" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_KNEE.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_KNEE.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_knee"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12"
+      rpy="0 0 0.01704" />
+    <parent
+      link="R_HIP_PITCH" />
+    <child
+      link="R_KNEE" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_ANK_PITCH">
+    <inertial>
+      <origin
+        xyz="-0.022368 0.00024661 0.014708"
+        rpy="0 0 0" />
+      <mass
+        value="0.15426" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_ANK_PITCH.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_ANK_PITCH.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ank_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12"
+      rpy="0 0 0" />
+    <parent
+      link="R_KNEE" />
+    <child
+      link="R_ANK_PITCH" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="R_ANK_ROLL">
+    <inertial>
+      <origin
+        xyz="0.00024893 -0.004954 -0.030898"
+        rpy="0 0 0" />
+      <mass
+        value="0.018474" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_ANK_ROLL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/R_ANK_ROLL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ank_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="R_ANK_PITCH" />
+    <child
+      link="R_ANK_ROLL" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="1000"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0" />
+  </joint>
+  <link
+    name="IMU">
+    <inertial>
+      <origin
+        xyz="4.39830229850696E-05 -7.48016657764117E-18 0.00523062431007427"
+        rpy="0 0 0" />
+      <mass
+        value="0.0468998869628787" />
+      <inertia
+        ixx="0.001"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.001"
+        iyz="0.0"
+        izz="0.001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/IMU.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot305_description_imu/meshes/IMU.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu"
+    type="fixed">
+    <origin
+      xyz="-0.076 0 0.072"
+      rpy="0 0 0" />
+    <parent
+      link="BODY" />
+    <child
+      link="IMU" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+<gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/robot305</robotNamespace>
+    </plugin>
+  </gazebo>
+
+
+
+
+   <transmission name="t_head_pan">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_pan">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_head_pan">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_head_tilt">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="head_tilt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_head_tilt">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_sho_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_sho_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_sho_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_sho_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_sho_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_sho_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_el">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_el">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_el">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_sho_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_sho_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_sho_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_sho_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_sho_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_sho_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_el">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_el">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_el">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_waist">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="waist">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_waist">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_hip_yaw">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_hip_yaw">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_hip_yaw">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_hip_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_hip_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_hip_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_hip_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_hip_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_hip_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_knee">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_knee">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_knee">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_ank_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_ank_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_ank_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_l_ank_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l_ank_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_l_ank_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_hip_yaw">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_yaw">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_hip_yaw">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_hip_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_hip_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_r_hip_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_hip_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_hip_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_knee">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_knee">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_knee">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_ank_pitch">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_ank_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_ank_pitch">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+   <transmission name="t_r_ank_roll">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="r_ank_roll">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="m_r_ank_roll">
+      <hardwareInterface>hardware_interface/hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+<gazebo reference="BODY">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_SHO_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_SHO_PITCH">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_EL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_HIP_YAW">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_HIP_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_HIP_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_KNEE">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="R_ANK_PITCH">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_SHO_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_SHO_PITCH">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_EL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_HIP_YAW">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_HIP_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_HIP_ROLL">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_KNEE">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_ANK_PITCH">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="HEAD_TILT">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/WhiteGlow</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="HEAD_PAN">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/Grey</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="WAIST">
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <material>Gazebo/White</material>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+<gazebo reference="L_ANK_ROLL">
+    <material>Gazebo/Yellow</material>
+    <kp>100000.0</kp>
+    <kd>100.0</kd>
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <fdir1>1 0 0</fdir1>
+    <maxVel>1.0</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+
+
+<gazebo reference="R_ANK_ROLL">
+    <material>Gazebo/Green</material>
+    <kp>100000.0</kp>
+    <kd>100.0</kd>
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <fdir1>1 0 0</fdir1>
+    <maxVel>1.0</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+
+<gazebo reference="">
+
+
+    <material>Gazebo/Grey</material>
+
+  </gazebo>
+</robot>
