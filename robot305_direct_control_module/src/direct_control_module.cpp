@@ -1,20 +1,4 @@
-/*******************************************************************************
-* Copyright 2017 ROBOTIS CO., LTD.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*     http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*******************************************************************************/
-
-/* Author: Kayman */
+/* Author: Mahoro*/
 
 #include <stdio.h>
 #include "robot305_direct_control_module/direct_control_module.h"
@@ -58,7 +42,7 @@ DirectControlModule::~DirectControlModule()
 
 void DirectControlModule::initialize(const int control_cycle_msec, robotis_framework::Robot *robot)
 {
-  robot305_kinematics_ = new OP3KinematicsDynamics(WholeBody);
+  robot305_kinematics_ = new ROBOT305KinematicsDynamics(WholeBody);
 
   // init result, joint_id_table
   int joint_index = 0;
@@ -193,7 +177,7 @@ void DirectControlModule::setJointCallback(const sensor_msgs::JointState::ConstP
   {
     // check collision of target angle
     will_be_collision_ = false;
-    OP3KinematicsDynamics *robot305_kinematics_for_target = new OP3KinematicsDynamics(WholeBody);
+    ROBOT305KinematicsDynamics *robot305_kinematics_for_target = new ROBOT305KinematicsDynamics(WholeBody);
     // set goal angle and run forward kinematics
     for ( std::map<std::string, int>::iterator joint_index_it = using_joint_name_.begin();
           joint_index_it != using_joint_name_.end(); joint_index_it++)
@@ -526,7 +510,7 @@ bool DirectControlModule::checkSelfCollision()
   return collision_result;
 }
 
-bool DirectControlModule::getDiff(OP3KinematicsDynamics *kinematics, int end_index, int base_index, double &diff)
+bool DirectControlModule::getDiff(ROBOT305KinematicsDynamics *kinematics, int end_index, int base_index, double &diff)
 {
   if(kinematics->robot305_link_data_[end_index] == NULL | kinematics->robot305_link_data_[base_index] == NULL)
     return false;
