@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<launch>    
+    <param name="gazebo"                   value="true"    type="bool"/>
+    <param name="gazebo_robot_name"        value="robot305"/>
+    
+
+    <param name="robot_file_path"          value="$(find robot305_manager)/config/robot305.robot"/>
+    <param name="init_file_path"           value="$(find robot305_manager)/config/dxl_init_robot305.yaml"/>
+    <param name="device_name"              value="/dev/ttyUSB0"/>
+    
+    <!-- robot305 Manager -->
+    <node pkg="robot305_manager" type="robot305_manager" name="robot305_manager" output="screen"/>
+</launch>

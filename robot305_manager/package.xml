@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>robot305_manager</name>
+  <version>0.0.1</version>
+  <description>
+    The robot305_manager package
+  </description>
+  <license>Apache 2.0</license>
+  <author email="kmjung@robotis.com">Kayman</author>
+  <maintainer email="geyimin55@rgamil.com">Mahoro</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>robotis_controller_msgs</depend>
+  <depend>robot305_action_module_msgs</depend>
+  <depend>robot305_walking_module_msgs</depend>
+  <depend>robot305_online_walking_module_msgs</depend>
+  <depend>cmake_modules</depend>
+  <depend>dynamixel_sdk</depend>
+  <depend>robotis_framework_common</depend>
+  <depend>robotis_device</depend>
+  <depend>robotis_controller</depend>
+  <depend>robotis_math</depend>
+  <depend>robot305_kinematics_dynamics</depend>
+  <depend>robot305_balance_control</depend>
+  <depend>open_cr_module</depend>
+  <depend>robot305_base_module</depend>
+  <depend>robot305_head_control_module</depend>
+  <depend>robot305_walking_module</depend>
+  <depend>robot305_action_module</depend>
+  <depend>robot305_direct_control_module</depend>
+  <depend>robot305_online_walking_module</depend>
+  <!--depend>robot305_tuning_module</depend>
+  <depend>robot305_tuning_module_msgs</depend-->
+  <!--exec_depend>robot305_localization</exec_depend-->
+</package>
